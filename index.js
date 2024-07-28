@@ -110,6 +110,7 @@ async function run() {
             console.log(filter)
             const query = {
                 // price: { $lt: 150,  $gt: 50}  /* number convert age korte hbe  50 theke 150 er modde */
+                title: {$regex: filter.search, $options: 'i'}  /* search diye kicu khuje ber kora */
             };
             const options = {
                 sort: {
